@@ -4,22 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Pokedex</title>
-    
+    <link rel="stylesheet" href="style.css">
+    <script src="animation.js"></script>
 </head>
 <body>
     
-    <div id="pokedex">
-        <h1>Mini Pokedex</h1>
-        <input type="text" id="search" placeholder="Entrer le nom d'un pokemon..">
-        <button id="btn-search">Rechercher</button>
+    <h1 class="logo">Mini Pokedex</h1>
+    <input type="text" id="search" placeholder="Entrer le nom d'un pokemon..">
+    <button id="btn-search">Rechercher</button>
 
-        <div id="pokemon-card">
-            <img id="pokemon-img" src="">
-            <h2 id="pokemon-name"></h2>
-            <p id="pokemon-type"></p>
-            <p id="pokemon-stat"></p>
+    <div class="container">
+
+
+        <div class="window">
+            <div class="window-content">
+                <!-- Pokédex -->
+                <div class="pokedex">
+                    <div class="screen">
+                        <img id="pokemon-gif" src="" alt=" " class="pokedex-gif">
+                        <img id="pokedex-image" src="assets/pics/nature.png" alt="Image Pokedex" class="pokedex-img">
+                    </div>
+                </div>
+            </div>
         </div>
+        
+
+        <!-- notebook -->
+        <div class="notebook">
+            <div class="notebook-screen">
+                <div id="pokedex">
+                    <div id="pokemon-card">
+                        <img id="pokemon-img" src="">
+                        <h2 id="pokemon-name"></h2>
+                        <p id="pokemon-type"></p>
+                        <p id="pokemon-stat"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
+    
     <script src="script.js"></script>
 </body>
 </html>

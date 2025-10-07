@@ -1,0 +1,186 @@
+@font-face {
+  font-family: "SynthPixel";
+  src: url("assets/fonts/SynthPixel.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "LmsPokedex";
+  src: url("assets/fonts/LmsPokedex.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "PokemonSolid";
+  src: url("assets/fonts/PokemonSolid.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "PixelCraft";
+  src: url("assets/fonts/PixelCraft.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "PixelOperator";
+  src: url("assets/fonts/pixel_operator/PixelOperatorMono8.ttf")
+    format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "PixelOperator";
+  src: url("assets/fonts/pixel_operator/PixelOperatorMono8-Bold.ttf")
+    format("truetype");
+  font-weight: bold;
+}
+
+:root {
+  --background-color: #c8bfe7;
+  --text-color: #000040;
+  --accent-color: #880015;
+  --button-background: #000080;
+
+  --red: #ff0000;
+  --boston-red: #cc0000;
+  --blue: #3b4cca;
+  --yellow: #ffde00;
+  --gold-foll: #b3a125;
+}
+
+body {
+  background-image: url("assets/pics/nature-true.jpg");
+  background-size: cover;
+  margin: 0;
+  height: 100vh;
+}
+.logo {
+  font-family: "PokemonSolid", sans-serif;
+  font-size: 100px;
+  color: var(--yellow);
+  -webkit-text-stroke: 5px var(--blue);
+  text-align: center;
+  text-shadow: #000 2px 2px 0px, #000 4px 4px 0px, #000 6px 6px 0px;
+}
+
+
+/* Conteneur général (fenêtre + pokedex côte à côte) */
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 50px; /* espace entre les deux */
+  align-items: flex-end;
+}
+
+/* --- La fenêtre --- */
+.window {
+  width: 700px; /* taille de la fenêtre */
+  height: 700px;
+  background-image: url("assets/pics/border02.png");
+  background-size: contain; /* montre l’image entière sans répétition */
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  overflow: hidden; /* important pour contenir le contenu */
+
+  display: flex;
+}
+
+/* --- Contenu scrollable à l’intérieur --- */
+.window-content {
+  position: absolute;
+  top: 8.5%; /* espace pour la barre du haut */
+  bottom: 2%;
+  left: 18%;
+  right: 10%;
+  overflow-y: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Pokédex */
+.pokedex {
+  width: 400px;
+  height: 550px;
+  background-image: url('assets/pics/pokedex.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  box-shadow: #000;
+}
+
+/* Écran à l'intérieur du Pokédex */
+.screen {
+  position: relative;
+  top: 17.5%;  /* ajuste selon ton image */
+  left: 12%;
+  width: 76%;
+  height: 53%;
+  overflow: hidden;
+}
+
+/* Image affichée à l’intérieur */
+.pokedex-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.pokedex-gif {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 50%;
+  height: 50%;
+  object-fit: contain; /* ou cover selon ton rendu souhaité */
+  pointer-events: none; /* permet de cliquer à travers le gif */
+  z-index: 2; /* s’assure qu’il est au-dessus */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+  body {
+    background-image: url("assets/pics/bg00.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 50vh;
+  }
+
+  .logo {
+    font-size: 40px;
+    -webkit-text-stroke: 2px var(--blue);
+  }
+
+  .window {
+    width: 400px; /* taille de la fenêtre */
+    height: 400px;
+    background-image: url("assets/pics/border01.png");
+  }
+  .window-content {
+    position: absolute;
+    top: 9%; /* espace pour la barre du haut */
+    bottom: 2%;
+    left: 16%;
+    right: 16%;
+    overflow-y: auto;
+    padding: 20px;
+    text-align: center;
+  }
+}

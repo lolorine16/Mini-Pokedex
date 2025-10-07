@@ -6,8 +6,9 @@ btn.addEventListener('click', () => {
         .then(res => res.json())
         .then(data => {
             document.getElementById('pokemon-name').innerText = data.name;
-            document.getElementById('pokemon-img').src = data.sprites.other['official-artwork'].front_default;
+            document.getElementById('pokemon-img').src = data.sprites.front_default;
             document.getElementById('pokemon-type').innerText = data.types.map(t => t.type.name).join(', ');
+            document.getElementById('pokemon-gif').src = data.sprites.other['showdown'].front_default;
         })
         .catch(() => alert("Pokemon non trouve !"));
 });
