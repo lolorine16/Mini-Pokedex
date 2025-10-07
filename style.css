@@ -11,6 +11,12 @@
   font-style: normal;
 }
 @font-face {
+  font-family: "Tiny5";
+  src: url("assets/fonts/Tiny5-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
   font-family: "PokemonSolid";
   src: url("assets/fonts/PokemonSolid.ttf") format("truetype");
   font-weight: normal;
@@ -42,6 +48,9 @@
   --accent-color: #880015;
   --button-background: #000080;
 
+  --paper-h1:  #400000 ;
+  --paper-text:  #804040;
+
   --red: #ff0000;
   --boston-red: #cc0000;
   --blue: #3b4cca;
@@ -65,12 +74,52 @@ body {
 }
 
 
+.notebook {
+  width: 700px;
+  height: 700px;
+  background-image: url('assets/pics/border03.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  align-self: center;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.5));
+}
+
+/* Écran à l'intérieur du Pokédex */
+.notebook-screen {
+  position: relative;
+  top: 15%;  /* ajuste selon ton image */
+  bottom: 5%;
+  left: 10%;
+  width: 80%;
+  height: 62%;
+  overflow-y: auto;
+}
+.pokemon-card {
+  display: flex;
+}
+.pokemon-img {
+  width: 50%;
+  height: 50%;
+}
+
+
+
+
+
+
+
+
+
+
+
 /* Conteneur général (fenêtre + pokedex côte à côte) */
 .container {
   display: flex;
   justify-content: center;
   gap: 50px; /* espace entre les deux */
-  align-items: flex-end;
+  align-items: flex-start;
 }
 
 /* --- La fenêtre --- */
@@ -83,7 +132,7 @@ body {
   background-position: center;
   position: relative;
   overflow: hidden; /* important pour contenir le contenu */
-
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.5));
   display: flex;
 }
 
@@ -108,7 +157,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   position: relative;
-  box-shadow: #000;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.5));
 }
 
 /* Écran à l'intérieur du Pokédex */
@@ -131,14 +180,13 @@ body {
 .pokedex-gif {
   position: absolute;
   bottom: 0;
-  left: 50%;
+  left: 45%;
   width: 50%;
   height: 50%;
   object-fit: contain; /* ou cover selon ton rendu souhaité */
   pointer-events: none; /* permet de cliquer à travers le gif */
   z-index: 2; /* s’assure qu’il est au-dessus */
 }
-
 
 
 
