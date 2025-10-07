@@ -17,6 +17,12 @@
   font-style: normal;
 }
 @font-face {
+  font-family: "VCR-OSD";
+  src: url("assets/fonts/VCR_OSD_Mono.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
   font-family: "PokemonSolid";
   src: url("assets/fonts/PokemonSolid.ttf") format("truetype");
   font-weight: normal;
@@ -43,11 +49,13 @@
 }
 
 :root {
-  --background-color: #c8bfe7;
+  --background-color: #ece9d8;
   --text-color: #000040;
   --accent-color: #880015;
-  --button-background: #000080;
-
+  --text: #000080;
+  --btn-border: #071679;
+  --btn-color1: #0061fc;
+  --btn-color2: #024fca;
   --paper-h1:  #400000 ;
   --paper-text:  #804040;
 
@@ -65,6 +73,7 @@ body {
   height: 100vh;
 }
 .logo {
+  top: 0;
   font-family: "PokemonSolid", sans-serif;
   font-size: 100px;
   color: var(--yellow);
@@ -86,22 +95,57 @@ body {
   filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.5));
 }
 
-/* Écran à l'intérieur du Pokédex */
+/* Ecran a l'interieur du Pokedex */
 .notebook-screen {
   position: relative;
-  top: 15%;  /* ajuste selon ton image */
+  top: 11%;  
   bottom: 5%;
   left: 10%;
-  width: 80%;
+  width: 88%;
   height: 62%;
   overflow-y: auto;
 }
 .pokemon-card {
   display: flex;
+  
+  gap: 30px;
+}
+.card1{
+  flex: 2;
+}
+.card2{
+  flex: 1;
 }
 .pokemon-img {
-  width: 50%;
-  height: 50%;
+  width: 60%;
+} 
+.search-input {
+  width: 500px;
+  height: 30px;
+  margin-left: 5px;
+  background-color: var(--background-color);
+  border: 5px solid var(--btn-color2);
+  border-radius: 10px;
+
+  font-family: 'VCR-OSD';
+  font-size: 20px;
+  padding: 5px 10px;
+}
+.search-input:focus {
+  outline: none;
+  border-color: var(--btn-color1);
+  box-shadow: 0 0 5px var(--btn-color1);
+}
+.btn-search {
+  background: linear-gradient(180deg, #024fca, #0061fc);
+  color: white;
+  border-radius: 10px;
+  /*border: 3px solid var(--btn-border);*/
+  width: 150px;
+  height: 50px;
+  margin-left: 5px;
+  font-family: 'VCR-OSD';
+  font-size: 20px;
 }
 
 
@@ -113,33 +157,32 @@ body {
 
 
 
-
-/* Conteneur général (fenêtre + pokedex côte à côte) */
+/* Conteneur general*/
 .container {
   display: flex;
   justify-content: center;
-  gap: 50px; /* espace entre les deux */
+  gap: 50px; 
   align-items: flex-start;
 }
 
-/* --- La fenêtre --- */
+/* --- La fenetre --- */
 .window {
-  width: 700px; /* taille de la fenêtre */
+  width: 700px;  
   height: 700px;
   background-image: url("assets/pics/border02.png");
-  background-size: contain; /* montre l’image entière sans répétition */
+  background-size: contain; 
   background-repeat: no-repeat;
   background-position: center;
   position: relative;
-  overflow: hidden; /* important pour contenir le contenu */
+  overflow: hidden; 
   filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.5));
   display: flex;
 }
 
-/* --- Contenu scrollable à l’intérieur --- */
+/* Contenu scrollable */ 
 .window-content {
   position: absolute;
-  top: 8.5%; /* espace pour la barre du haut */
+  top: 8.5%; 
   bottom: 2%;
   left: 18%;
   right: 10%;
@@ -160,17 +203,17 @@ body {
   filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.5));
 }
 
-/* Écran à l'intérieur du Pokédex */
+/* Ecran */
 .screen {
   position: relative;
-  top: 17.5%;  /* ajuste selon ton image */
+  top: 17.5%;  
   left: 12%;
   width: 76%;
   height: 53%;
   overflow: hidden;
 }
 
-/* Image affichée à l’intérieur */
+/* Image affichee */
 .pokedex-img {
   width: 100%;
   height: 100%;
@@ -183,9 +226,9 @@ body {
   left: 45%;
   width: 50%;
   height: 50%;
-  object-fit: contain; /* ou cover selon ton rendu souhaité */
-  pointer-events: none; /* permet de cliquer à travers le gif */
-  z-index: 2; /* s’assure qu’il est au-dessus */
+  object-fit: contain; 
+  pointer-events: none; 
+  z-index: 2; 
 }
 
 
