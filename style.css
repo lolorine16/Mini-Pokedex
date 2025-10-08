@@ -36,14 +36,14 @@
 }
 @font-face {
   font-family: "PixelOperator";
-  src: url("assets/fonts/pixel_operator/PixelOperatorMono8.ttf")
+  src: url("assets/fonts/pixel_operator/PixelOperator.ttf")
     format("truetype");
   font-weight: normal;
 }
 
 @font-face {
   font-family: "PixelOperator";
-  src: url("assets/fonts/pixel_operator/PixelOperatorMono8-Bold.ttf")
+  src: url("assets/fonts/pixel_operator/PixelOperator-Bold.ttf")
     format("truetype");
   font-weight: bold;
 }
@@ -71,6 +71,16 @@ body {
   background-size: cover;
   margin: 0;
   height: 100vh;
+}
+h3 {
+  font-family: "PixelOperator", sans-serif;
+  color: var(--text-color);
+  margin: 10px 0;
+}
+p {
+  font-family: "PixelOperator", sans-serif;
+  color: var(--text-color);
+  margin: 5px 0;
 }
 .logo {
   top: 0;
@@ -117,7 +127,14 @@ body {
   flex: 1;
 }
 .pokemon-img {
+  margin-top: 20px;
   width: 60%;
+  height: auto;
+  border: 4px ridge silver;
+  background-color: #f0f0f0;
+  padding: 4px;
+
+
 } 
 .search-input {
   width: 500px;
@@ -127,7 +144,8 @@ body {
   border: 5px solid var(--btn-color2);
   border-radius: 10px;
 
-  font-family: 'VCR-OSD';
+  font-family: 'PixelOperator', sans-serif;
+  font-weight: bold;
   font-size: 20px;
   padding: 5px 10px;
 }
