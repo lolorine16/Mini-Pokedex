@@ -338,7 +338,8 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    margin: 0;
+    background-color: #79c9fa;
+    margin-bottom: 70px;
   }
 
   .logo {
@@ -351,9 +352,6 @@ body {
     align-items: center;
     justify-content: center;
     gap: 0; 
-  }
-  .container > * {
-    margin: 0;
   }
   
   .notebook {
