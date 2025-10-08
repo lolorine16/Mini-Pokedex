@@ -72,16 +72,7 @@ body {
   margin: 0;
   height: 100vh;
 }
-h3 {
-  font-family: "PixelOperator", sans-serif;
-  color: var(--text-color);
-  margin: 10px 0;
-}
-p {
-  font-family: "PixelOperator", sans-serif;
-  color: var(--text-color);
-  margin: 5px 0;
-}
+
 .logo {
   top: 0;
   font-family: "PokemonSolid", sans-serif;
@@ -114,14 +105,14 @@ p {
   width: 88%;
   height: 62%;
   overflow-y: auto;
+  
 }
 .pokemon-card {
   display: flex;
-  
-  gap: 30px;
+  gap: 0.5rem;
 }
 .card1{
-  flex: 2;
+  flex: 1;
 }
 .card2{
   flex: 1;
@@ -131,11 +122,25 @@ p {
   width: 60%;
   height: auto;
   border: 4px ridge silver;
-  background-color: #f0f0f0;
+  background-color: var(--background-color);
   padding: 4px;
-
-
 } 
+.pokemon-name {
+  font-family: 'PixelOperator', sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+  color: var(--text-color);
+  margin-top: 10px;
+}
+.pokemon-description {
+  font-family: 'PixelOperator', sans-serif;
+  font-size: 24px;
+  color: var(--text-color);
+  margin-top: 20px;
+  margin-right: 16px;
+  text-align: justify;
+}
+
 .search-input {
   width: 500px;
   height: 30px;
