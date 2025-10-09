@@ -69,6 +69,7 @@
 body {
   background-image: url("assets/pics/nature-true.jpg");
   background-size: cover;
+  background-color: #79c9fa;
   margin: 0;
   height: 100vh;
 }
@@ -430,4 +431,97 @@ body {
     height: 310px;
   }
   
+}
+
+@media screen and (max-width: 810px) {
+  .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; 
+  }
+  .logo {
+    font-size: 60px;
+    -webkit-text-stroke: 3px var(--blue);
+  }
+  .search-input {
+    width: 250px;
+    height: 30px;
+    font-size: 18px;
+  }
+  .btn-search {
+    width: 100px;
+    height: 40px;
+    font-size: 16px;
+  }
+  .notebook {
+    width: 800px;
+    height: 500px;
+  }
+  .notebook-screen {
+    top: 16%;  
+    bottom: 2%;
+    left: 6%;
+    width: 88%;
+    height: 60%;
+  }
+  .pokemon-card {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .pokemon-img {
+    width: 130px;
+    height: auto;
+    margin-top: 10px;
+  }
+  .pokemon-name {
+    font-size: 30px;
+  }
+  .pokemon-id {
+    font-size: 18px;
+  }
+  .pokemon-description {
+    font-size: 18px;
+    margin-top: 10px;
+    margin-right: 8px;
+    padding: 0 10px;
+  }
+  .type-btn {
+    padding: 4px 10px;
+    font-size: 0.8rem;
+  }
+
+  .card1, .card2 {
+    width: 40%;
+  }
+  .card1 > * {
+    margin: 1px auto;
+    padding: 0;
+  }
+  .type-btn {
+    padding: 4px 10px;
+    font-size: 1rem;
+  }
+  .window {
+    width: 800px; 
+    height: 500px;
+    background-image: url("assets/pics/border01.png");
+  }
+
+  .window-content {
+    top: 18%; 
+    bottom: 2%;
+    left: 16%;
+    right: 10%;
+    overflow-y: auto;
+    padding: 20px;
+    text-align: center;
+    
+  }
+  .pokedex {
+    width: 230px;  
+    height: 320px;
+  }
 }
