@@ -447,12 +447,12 @@ body {
     -webkit-text-stroke: 3px var(--blue);
   }
   .search-input {
-    width: 180px;
+    width: 260px;
     height: 30px;
     font-size: 18px;
   }
   .btn-search {
-    width: 80px;
+    width: 100px;
     height: 40px;
     font-size: 16px;
   }
