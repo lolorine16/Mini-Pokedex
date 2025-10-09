@@ -360,11 +360,11 @@ body {
     height: 400px;
   }
   .notebook-screen {
-    top: 12%;  
+    top: 11.5%;  
     bottom: 2%;
     left: 4%;
     width: 100%;
-    height: 56%;
+    height: 54%;
   }
   .pokemon-card {
     flex-direction: row;
