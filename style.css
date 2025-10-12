@@ -107,6 +107,7 @@ body {
 }
 .pokemon-card {
   display: flex;
+  cursor: pointer;
 }
 .card1 {
   display: flex;
