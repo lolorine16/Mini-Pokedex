@@ -1,37 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Pokedex</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script src="animation.js"></script>
 </head>
+
 <body>
-    
     <h1 class="logo">Mini Pokédex</h1>
-    
 
     <div class="container">
-
         <!-- notebook -->
         <div class="notebook">
-            <input type="text" id="search" class="search-input" placeholder="pokemon id or name..">
+            <input type="text" id="search" class="search-input" placeholder="pokemon id or name or tap «all» to see all" />
             <button id="btn-search" class="btn-search">Search</button>
+            <!-- Filter controls for the list -->
+            <div class="list-controls" id="list-controls">
+                <input type="text" id="list-search" class="search-input" placeholder="Filter list by name.." />
+                <select id="type-filter" class="type-filter">
+                    <option value="all">All types</option>
+                </select>
+            </div>
             <div class="notebook-screen">
-                <div>
+
+                <div class="pokemon-listScreen" id="pokemon-listScreen">
+                    <div>
+
+
+                        <!-- Loader shown while fetching the list -->
+                        <div id="list-loader" class="list-loader" aria-hidden="true">
+                            <img src="assets/gifs/pokeball-sm.gif" alt="loading" class="loader-pokeball" />
+                        </div>
+                    </div>
+                    <div id="pokemon-list" class="pokemon-list">
+                        <!-- List items will be dynamically added here -->
+
+                    </div>
+                </div>
+                <div id="pokemon-cardScreen" class="pokemon-cardScreen">
                     <div id="pokemon-card" class="pokemon-card">
                         <div class="card1">
-                            <img id="pokemon-img" src="" class="pokemon-img">
+                            <img id="pokemon-img" src="" class="pokemon-img" />
                             <p id="pokemon-id" class="pokemon-id"></p>
                             <h3 id="pokemon-name" class="pokemon-name"></h3>
+                            <h3 id="pokemon-Jpname" class="pokemon-jpname"></h3>
                             <div class="types"></div>
                         </div>
                         <div class="card2">
                             <p id="pokemon-description" class="pokemon-description"></p>
                             <p id="pokemon-stat" class="pokemon-stat"></p>
                         </div>
-                        
                     </div>
                 </div>
             </div>
@@ -42,15 +63,15 @@
                 <!-- Pokédex -->
                 <div class="pokedex">
                     <div class="screen">
-                        <img id="pokemon-gif" src="" alt=" " class="pokedex-gif">
-                        <img id="pokedex-image" src="assets/gifs/nature.gif" alt="Image Pokedex" class="pokedex-img">
+                        <img id="pokemon-gif" src="" alt=" " class="pokedex-gif" />
+                        <img id="pokedex-image" src="assets/gifs/nature.gif" alt="Image Pokedex" class="pokedex-img" />
                     </div>
                 </div>
             </div>
         </div>
-        
     </div>
-    
+
     <script src="script.js"></script>
 </body>
+
 </html>
