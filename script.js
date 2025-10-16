@@ -30,6 +30,9 @@ btn.addEventListener('click', () => {
     .catch(() => alert("Pokémon non trouvé !"));
 });
 
+
+
+
 function displayTypes(types) {
   const typesContainer = document.querySelector(".types");
   typesContainer.innerHTML = ""; // vider avant d'ajouter
